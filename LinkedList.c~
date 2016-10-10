@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node {int i; struct node *next;};
+
+void print_list(node *n) {
+  node *location = n;
+  printf("[");
+  while (location) {
+    printf("%d,",location->i);
+    *location = location->next;
+  }
+}
+
+
+
+
+int main() {
+  node *som;
+  som = (struct *node)malloc(sizeof(struct node));
+  
+  
+  return 0;
+}
+
+
+
+/*
+print_list
+Should take a pointer to a node struct and print out all of the data in the list
+
+insert_front
+Should take a pointer to the existing list and the data to be added, create a new node, put it at the beginning of the list and return a pointer to the beginning of the list.
+
+free_list
+Should take a pointer to a list as a parameter and then go through the entire list freeing each node and return a pointer to the beginning of the list (which should be NULL by then).    
+ */
