@@ -31,6 +31,7 @@ struct node * free_list(struct node *n) {
     free(n);
     n = hold;
   }
+  free(n);
   return toReturn;
   
 }
